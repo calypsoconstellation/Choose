@@ -27,7 +27,7 @@ const storyNodes = {
     image: "images/pine-forest2.jpg",
     choices: [
       { text: "Walk towards the sound", next: "river" },
-      { text: "Walk away from the sound", next: "deepWood" }
+      { text: "Walk away from the sound", next: "death" }
     ]
   },
 
@@ -103,6 +103,7 @@ function showNode(nodeKey) {
 
 // Start the game
 showNode("start");
+
 
 
 
