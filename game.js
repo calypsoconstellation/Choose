@@ -46,7 +46,7 @@ const storyNodes = {
     choices: [
       { text: "Run", next: "death" },
       { text: "Freeze", next: "death" },
-      { text: "Say hello", next: "death"}
+      { text: "Say hello", next: "death" }
     ]
   },
 
@@ -55,7 +55,7 @@ const storyNodes = {
     text: "It’s dark here. Darker than it has a right to be, because you can see the bright blue of the sky through the gaps in the branches. It’s as if the light refuses to breach the barrier of the forest. Combined with the strange muffling of your voice, you begin to worry for your senses. Had you hit your head? You don’t recall falling. Then you see them. Clear and bright in the dark of the underbrush. Eyes.", 
     image: "images/eyes.jpg",
     choices: [
-      { text: "Choice", next: "death"},
+      { text: "Choice", next: "death" },
     ]
   },
 
@@ -64,8 +64,8 @@ const storyNodes = {
     text: "The water is closer than you’d assumed based on the noise. For a half second you wonder if it’s your hearing that’s the issue, but dismiss the thought. It’s brighter here, beyond the trees, and there’s no longer any sign of the high, pained keening you’d heard before.",
     image: "images/river.jpg",
     choices: [
-      { text: "Search for a way to cross the stream", next: "death"},
-      { text: "Search for the source of the vanished keening", next: "death"}
+      { text: "Search for a way to cross the stream", next: "death" },
+      { text: "Search for the source of the vanished keening", next: "death" }
     ]
   }
 
@@ -74,7 +74,7 @@ const storyNodes = {
     text: "Your actions have resulted in your demise. Thanks for playing.", 
     image: "images/death.jpg", 
     choices: [
-      { text: "Reincarnate", next: "start"},
+      { text: "Reincarnate", next: "start" },
     ]
 }
 };
@@ -103,6 +103,7 @@ function showNode(nodeKey) {
 
 // Start the game
 showNode("start");
+
 
 
 
