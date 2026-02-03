@@ -23,11 +23,11 @@ const storyNodes = {
   },
 
   listen: {
-    text: "You have the distinct feeling you aren’t supposed to speak. You wait in the quiet for a moment before you hear it. Soft, barely there. The sound of running water, and the soft sounds of someone or something in distress. ",
+    text: "You have the distinct feeling you aren’t supposed to speak. You wait in the quiet for a moment before you hear it. Soft, barely there. The sound of running water, and the soft sounds of someone or something in distress.",
     image: "images/pine-forest2.jpg",
     choices: [
       { text: "Walk towards the sound", next: "river" },
-      { text: "Walk away from the sound", next: "death" }
+      { text: "Walk away from the sound", next: "deepWood" }
     ]
   },
 
@@ -47,6 +47,51 @@ const storyNodes = {
       { text: "Run", next: "death" },
       { text: "Freeze", next: "death" },
       { text: "Say hello", next: "death" }
+    ]
+  },
+
+  /* Deep Wood */
+  deepWood: {
+    text: "You don’t want to be involved. There’s no way to tell just what you’d be walking into. Instead you turn on your heel and walk the other way. Deeper into the woods. The further you go, the more the trees change around you.",
+    image: "images/deepWood.jpg",
+    choices: [
+      { text: "Continue", next: "deepWoodI"}
+    ]
+  },
+
+  deepWoodI: {
+    text: "It's cold. The water you've stepped in is cold. Your left foot, bare, is submerged up to your ankle. You've sunk into the moss where ground has become marshland.",
+    image: "images/marshland.jpg",
+    choices: [
+      { text: "Turn back", next: "death"},
+      { text: "Go through", next: "marshland"}
+    ]
+  },
+
+  marshland: {
+    text: "You step forward, minding your step to find the path of least resistance. As you move deeper the light from the sun fades, replaced by the flikcering orange light of candles scattered across the space. Candles? You suppose candles mean people.",
+    image: "Images/marshLight.jpg",
+    choices: [
+      { text: "Turn back", next: "death"},
+      { text: "Go further", next: "marshLight"}
+    ]
+  },
+
+  marshLight: {
+    text: "You continue on, encouraged by the thought of encountering people. Maybe they'll have answers for you. A way to get you home, wherever that is. The further you go, the less candles you see, until... oh no. Oh God. What..?",
+    image: "Images/marshLight.jpg",
+    choices: [
+      { text: "Continue", next: "wetZombie"}
+    ]
+  },
+
+  wetZombie: {
+    text: "Your heart pounds, terror possessing you. Floating in the water, moving towards you in slow, lethargic gestures... people? Something's wrong. Something's terribly wrong.",
+    image: "Images/wetZombie.jpg",
+    choices: [
+      { text: "Run", next: "death"},
+      { text: "Freeze", next: "death"},
+      { text: "Scream", next: "death"}
     ]
   },
 
@@ -103,6 +148,7 @@ function showNode(nodeKey) {
 
 // Start the game
 showNode("start");
+
 
 
 
