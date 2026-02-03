@@ -75,7 +75,7 @@ const storyNodes = {
     image: "images/death.jpg", 
     choices: [
       { text: "Reincarnate", next: "start"},
-      ]
+    ]
   }
 };
 
@@ -103,4 +103,5 @@ function showNode(nodeKey) {
 
 // Start the game
 showNode("start");
+
 
