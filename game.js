@@ -67,7 +67,7 @@ const storyNodes = {
       { text: "Search for a way to cross the stream", next: "death" },
       { text: "Search for the source of the vanished keening", next: "death" }
     ]
-  }
+  },
 
   /* death scene */
   death: {
@@ -103,6 +103,7 @@ function showNode(nodeKey) {
 
 // Start the game
 showNode("start");
+
 
 
 
