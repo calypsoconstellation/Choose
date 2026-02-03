@@ -26,7 +26,7 @@ const storyNodes = {
     text: "You have the distinct feeling you aren’t supposed to speak. You wait in the quiet for a moment before you hear it. Soft, barely there. The sound of running water, and the soft sounds of someone or something in distress. ",
     image: "images/pine-forest2.jpg",
     choices: [
-      { text: "Walk towards the water", next: "river" },
+      { text: "Walk towards the sound", next: "river" },
       { text: "Walk away from the sound", next: "deepWood" }
     ]
   },
@@ -44,9 +44,9 @@ const storyNodes = {
     text: "The deer don't seem to mind him, though, and aren't animals supposed to be good judges of character? Or maybe there's something wrong with them too...",
     image: "images/deerherd.jpg",
     choices: [
-      { text: "Run", next: "eyes" },
-      { text: "Freeze", next: "eyes" },
-      { text: "Say hello", next: "eyes"}
+      { text: "Run", next: "death" },
+      { text: "Freeze", next: "death" },
+      { text: "Say hello", next: "death"}
     ]
   },
 
@@ -55,7 +55,7 @@ const storyNodes = {
     text: "It’s dark here. Darker than it has a right to be, because you can see the bright blue of the sky through the gaps in the branches. It’s as if the light refuses to breach the barrier of the forest. Combined with the strange muffling of your voice, you begin to worry for your senses. Had you hit your head? You don’t recall falling. Then you see them. Clear and bright in the dark of the underbrush. Eyes.", 
     image: "images/eyes.jpg",
     choices: [
-      { text: "Choice", next: "deerherd"},
+      { text: "Choice", next: "death"},
     ]
   },
 
@@ -64,9 +64,18 @@ const storyNodes = {
     text: "The water is closer than you’d assumed based on the noise. For a half second you wonder if it’s your hearing that’s the issue, but dismiss the thought. It’s brighter here, beyond the trees, and there’s no longer any sign of the high, pained keening you’d heard before.",
     image: "images/river.jpg",
     choices: [
-      { text: "Search for a way to cross the stream", next: "searchCross"},
-      { text: "Search for the source of the vanished keening", next: "searchKeen"}
+      { text: "Search for a way to cross the stream", next: "death"},
+      { text: "Search for the source of the vanished keening", next: "death"}
     ]
+  }
+
+  /* death scene */
+  death: {
+    text: "Your actions have resulted in your demise. Thanks for playing.", 
+    image: "images/death.jpg", 
+    choices: [
+      { text: "Reincarnate", next: "start"},
+      ]
   }
 };
 
@@ -94,3 +103,4 @@ function showNode(nodeKey) {
 
 // Start the game
 showNode("start");
+
